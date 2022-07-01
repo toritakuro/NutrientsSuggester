@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/favorite', [App\Http\Controllers\HomeController::class, 'favorite'])->name('favorite');
+Route::get('/result', [App\Http\Controllers\HomeController::class, 'result'])->name('result');
