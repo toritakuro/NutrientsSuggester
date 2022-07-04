@@ -5,16 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header d-flex align-items-center justify-content-center">タンパク質の量を入力してください</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                <div class="d-flex align-items-center justify-content-center m-4">
+                  {{Form::input('number','protein',0)}} g
+                  <input type="submit" value="検索" >
                 </div>
             </div>
         </div>
