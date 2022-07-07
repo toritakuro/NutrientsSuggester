@@ -13,11 +13,23 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <!-- データが受け取れているかの確認 -->
+                    <?php
+                      echo $needprotein;
+                      foreach ($foods as $food) {
+                        echo $food -> name;
+                      }
+                     ?>
+                     <!-- ホームボタンの設置 -->
+                     <form action="/home" method="post">
+                       @csrf
+                       <input type="submit" value="ホームに戻る" >
+                     </form>
 
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
