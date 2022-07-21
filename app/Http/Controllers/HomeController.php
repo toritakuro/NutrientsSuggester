@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Food;
+use Illuminate\Support\Arr;
+use App\Models\Food;
+use App\Models\SevenFood;
 
 class HomeController extends Controller
 {
@@ -26,12 +28,30 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function favorite()
     {
         return view('favorite');
     }
-    public function result()
+
+    public function result(Request $request)
     {
-        return view('result');
+      // フォームから送られた値をそれぞれ格納
+        $needprotein = $request -> protein;
+        $needfat = $request -> fat;
+        $needcarbo = $request -> carbo;
+
+      // モデルを使って$foodsにデータを格納
+        // $foods = new Food;
+        // $foods = $foods->food()->toArray();
+        // $i = 0;
+
+        $sevenfoods = new SevenFood;
+        $sevenfoods = $sevenfoods->sevenfood()->toArray();
+        $i = 0;
+
+
+
+        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo'));
     }
 }
