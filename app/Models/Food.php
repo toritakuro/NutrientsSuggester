@@ -11,7 +11,7 @@ class Food extends Model
 
       public function food(){
       // foodsテーブルのデータを全て取得し、配列として$foodsに格納
-      $foods = Food::all();
+      $foods = Food::get();
       return $foods;
       // フォームから送信された値に一致するまで繰り返しproteinの値を取り出し、足していく
     }
