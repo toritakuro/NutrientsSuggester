@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -15,6 +16,17 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         //
     ];
+
+    public function render($request, Throwable $exception)
+    {
+        // ログイン状態が切れた時、ログイン画面に遷移する
+
+        if ($exception instanceof TokenMismatchException) {
+            return redirect('/login');
+           }
+
+        return parent::render($request, $exception);
+    }
 
     /**
      * A list of the inputs that are never flashed for validation exceptions.
