@@ -40,11 +40,8 @@ class HomeController extends Controller
         $needprotein = $request -> protein;
         $needfat = $request -> fat;
         $needcarbo = $request -> carbo;
+        $type = $request -> input('type');
 
-      // モデルを使って$foodsにデータを格納
-        // $foods = new Food;
-        // $foods = $foods->food()->toArray();
-        // $i = 0;
 
         $sevenfoods = new SevenFood;
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
@@ -52,6 +49,6 @@ class HomeController extends Controller
 
 
 
-        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo'));
+        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo','type'));
     }
 }
