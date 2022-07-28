@@ -21,6 +21,7 @@
                     $totalkcal = 0;
                     $totalfat = 0;
                     $totalcarbo = 0;
+                    $resultfoods = array();
 
 
                     // 便宜上試行回数を542回までにする
@@ -119,15 +120,11 @@
 
                       // fat,carboの合計値が入力された値を越えたら処理をやり直し
                       if($needfat < $totalfat + $randomfood['fat'] ||
-                        $needcarbo < $totalcarbo + $randomfood['carbo']) {
-                          continue;
-                        }
+                         $needcarbo < $totalcarbo + $randomfood['carbo']) {
+                           continue;
+                      }
 
-                      // 取り出したデータを表示
-                      echo '・'.$randomfood['name'].'('.$randomfood['type'].')';
-                      echo '<br>';
-                      echo '【・タンパク質:'.$randomfood['protein'].'g'.'・脂質:'.$randomfood['fat'].'g'.'・炭水化物:'.$randomfood['carbo'].'g'.'   kcal:'.$randomfood['kcal'].'】';
-                      echo '<br>';
+                      $resultfoods[] = [$randomfood['name'],$randomfood['protein'],$randomfood['fat'],$randomfood['carbo'],$randomfood['kcal'],$randomfood['type']];
 
                       // 処理を行う毎にタンパク質、カロリー、脂質、炭水化物量を足していく
                       $totalprotein = $totalprotein + $randomfood['protein'];
@@ -142,32 +139,46 @@
 
                     }
 
-                    // それぞれの合計値を表示
-                    echo '<br>';
-                    echo '総タンパク質量約'.$totalprotein.'g';
-                    echo '<br>';
-                    echo '総脂質量約'.$totalfat.'g';
-                    echo '<br>';
-                    echo '総炭水化物量約'.$totalcarbo.'g';
-                    echo '<br>';
-                    echo '総カロリー約'.$totalkcal.'kcal';
-                    echo '<br>';
-                    echo '<br>';
+                    if ($totalprotein >= $needprotein &&
+                        $totalfat <= $needfat &&
+                        $totalcarbo <= $needcarbo) {
+                          // 取り出したデータを表示
+                          foreach ($resultfoods as $resultfood => $value) {
+                            echo '・'.$value[0].'('.$value[5].')'.'<br>'.
+                            '【・タンパク質:'.$value[1].'g'.'・脂質:'.$value[2].'g'.'・炭水化物:'.$value[3].'g'.'   kcal:'.$value[4].'】'.'<br>';
+                          }
+
+
+                          // それぞれの合計値を表示
+                          echo '<br>';
+                          echo '総タンパク質量約'.$totalprotein.'g';
+                          echo '<br>';
+                          echo '総脂質量約'.$totalfat.'g';
+                          echo '<br>';
+                          echo '総炭水化物量約'.$totalcarbo.'g';
+                          echo '<br>';
+                          echo '総カロリー約'.$totalkcal.'kcal';
+                          echo '<br>';
+                          echo '<br>';
+
+                    }
 
                     if ($totalprotein<$needprotein) {
                         echo "条件に合う検索結果が得られませんでした。お手数ですが、もう一度検索してください。";
                     }
+
+
                      ?>
                    　</div>
 
                      <!-- ホームボタンの設置 -->
                      　<form class="text-center" action="/home" method="post">
-                       @csrf
-                       <input type="submit" value="ホームに戻る" >
-                       <a onclick="window.location.reload();">
-                       <input type="button" value="再検索" >
-                    　 </a>
-                    </form>
+                         @csrf
+                         <input type="submit" value="ホームに戻る" >
+                         <a onclick="location.reload();">
+                         <input type="button" value="再検索" >
+                    　   </a>
+                       </form>
 
                 </div>
             </div>
