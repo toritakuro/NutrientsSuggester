@@ -151,20 +151,23 @@
 
                           // それぞれの合計値を表示
                           echo '<br>';
-                          echo '総タンパク質量約'.$totalprotein.'g';
+                          echo '総タンパク質量 '.$totalprotein.'g';
                           echo '<br>';
-                          echo '総脂質量約'.$totalfat.'g';
+                          echo '総脂質量 '.$totalfat.'g';
                           echo '<br>';
-                          echo '総炭水化物量約'.$totalcarbo.'g';
+                          echo '総炭水化物量 '.$totalcarbo.'g';
                           echo '<br>';
-                          echo '総カロリー約'.$totalkcal.'kcal';
+                          echo '総カロリー '.$totalkcal.'kcal';
                           echo '<br>';
                           echo '<br>';
+                          echo "※ブラウザの更新ボタンで再検索ができます。";
 
                     }
 
                     if ($totalprotein<$needprotein) {
                         echo "条件に合う検索結果が得られませんでした。お手数ですが、もう一度検索してください。";
+                        echo '<br>';
+                        echo "※ブラウザの更新ボタンで再検索ができます。";
                     }
 
 
@@ -175,9 +178,6 @@
                      　<form class="text-center" action="/home" method="post">
                          @csrf
                          <input type="submit" value="ホームに戻る" >
-                         <a onclick="location.reload();">
-                         <input type="button" value="再検索" >
-                    　   </a>
                        </form>
 
                 </div>
