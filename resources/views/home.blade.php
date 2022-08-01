@@ -25,7 +25,8 @@
 
                   　　<input class="mt-2" type="submit" value="検索" >
                 </div>
-                <dic class="mx-auto mb-4">
+                <div class="mx-auto mb-4">
+                  
                   <p class="mt-4">以下の種類の中から検索</p>
                   <div class="justify-content-center">
                   {{ Form::checkbox('type[]', '揚げ物・フランク・焼き鳥・中華まん', true) }} 揚げ物・フランク・焼き鳥・中華まん
