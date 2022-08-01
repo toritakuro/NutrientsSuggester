@@ -139,15 +139,26 @@
 
                     }
 
+                    $counter = 1;
+
                     if ($totalprotein >= $needprotein &&
                         $totalfat <= $needfat &&
                         $totalcarbo <= $needcarbo) {
                           // 取り出したデータを表示
-                          foreach ($resultfoods as $resultfood => $value) {
-                            echo '・'.$value[0].'('.$value[5].')'.'<br>'.
+                          foreach ($resultfoods as $resultfood => $value) {?>
+                            <form class="pull-left pt-4" action="/favorite" method="post">
+                            {{Form::checkbox('favorite[]',$value[0])}}
+                            <?php
+                            echo $counter.'：'.$value[0].'('.$value[5].')'.'<br>'.
                             '【・タンパク質:'.$value[1].'g'.'・脂質:'.$value[2].'g'.'・炭水化物:'.$value[3].'g'.'   kcal:'.$value[4].'】'.'<br>';
-                          }
+                            $counter ++;
+                          }?>
 
+                              @csrf
+                              <input class="mt-3" type="submit" value="選択した商品をお気に入りに登録" >
+                          </form>
+
+                          <?php
 
                           // それぞれの合計値を表示
                           echo '<br>';
@@ -164,6 +175,7 @@
 
                     }
 
+
                     if ($totalprotein<$needprotein) {
                         echo "条件に合う検索結果が得られませんでした。お手数ですが、もう一度検索してください。";
                         echo '<br>';
@@ -172,7 +184,8 @@
 
 
                      ?>
-                   　</div>
+                    </div>
+
 
                      <!-- ホームボタンの設置 -->
                      　<form class="text-center" action="/home" method="post">
