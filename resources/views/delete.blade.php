@@ -15,24 +15,24 @@
                     @endif
                     <div class="lh-lg">
                       <?php
-
+                      // メッセージの表示
                           echo $empty;
-
                        ?>
-                <div class="d-flex justify-content-center p-3">
-                    <form class="text-center mr-2" action="/home" method="post">
-                        @csrf
-                        <input type="submit" value="ホームに戻る" >
-                    </form>
-                    <form class="text-center ml-2" action="/favorite" method="post">
-                        @csrf
-                        <input type="submit" value="一覧に戻る" >
-                    </form>
-                </div>
+                       <!-- ページ遷移ボタン -->
+                      <div class="d-flex justify-content-center p-3">
+                          <form class="text-center mr-2" action="/home" method="post">
+                              @csrf
+                              <input type="submit" value="ホームに戻る" >
+                          </form>
+                          <form class="text-center ml-2" action="/favorite" method="post">
+                              @csrf
+                              <input type="submit" value="一覧に戻る" >
+                          </form>
+                      </div>
 
 
 
-                  </div>
+                    </div>
                 </div>
             </div>
         </div>

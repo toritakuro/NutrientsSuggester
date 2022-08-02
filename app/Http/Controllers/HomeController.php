@@ -36,27 +36,37 @@ class HomeController extends Controller
 
     public function favorite(Request $request)
     {
+        // ユーザー情報の取得
         $user = $request->user();
         $user_id = $user->id;
+
+        // 送信されたデータの取得
         $favoritefoods = $request -> input('favorite');
+
+        //商品データの取得
         $sevenfoods = new SevenFood;
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
-        $favorites = array();
+
+        // インスタンス生成
         $allfavorites = new Favorite;
 
+        // 配列の準備
+        $favorites = array();
+
+        // ユーザーからリクエストがあれば処理を実行
         if(!empty($favoritefoods)){
-          foreach ($favoritefoods as $favoritefood) {
-              foreach ($sevenfoods as $sevenfood) {
-                  if($sevenfood['name'] == $favoritefood){
-                    $favorites[] = [$sevenfood['name'],$sevenfood['protein'],$sevenfood['fat'],$sevenfood['carbo'],$sevenfood['kcal'],$sevenfood['type']];
-                  }
-              }
-          }
+            foreach ($favoritefoods as $favoritefood) {
+                foreach ($sevenfoods as $sevenfood) {
+                  // 商品のデータを配列に格納
+                    if($sevenfood['name'] == $favoritefood){
+                        $favorites[] = [$sevenfood['name'],$sevenfood['protein'],
+                                        $sevenfood['fat'],$sevenfood['carbo'],$sevenfood['kcal'],$sevenfood['type']];
+                    }
+                }
+            }
         }
 
-        // データベースに同じ商品があるか確認、なければ新規登録
-
-
+        // favoritesテーブルに同じ商品があるか確認、なければ新規登録
         foreach($favorites as $favotite=>$value){
             if(DB::table('favorites')->where('name',$value[0])->exists()){
                 continue;
@@ -85,23 +95,26 @@ class HomeController extends Controller
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
         $i = 0;
 
-
-
         return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo','type'));
     }
+
+
     public function delete(Request $request)
     {
+       //  フォームから送信された値を変数に代入
         $deleteids = $request -> input('delete');
+
         $allfavorites = new Favorite;
 
+        // チェックボタンにチェックされていればテーブルから削除
         if(empty($deleteids)){
             $empty = "※商品を選択してください";
           }else{
-            $empty = "削除しました！";
-            foreach($deleteids as $deleteid){
-              Favorite::where('id',$deleteid)->delete();
-            }
+              $empty = "削除しました！";
+              foreach($deleteids as $deleteid){
+                  Favorite::where('id',$deleteid)->delete();
           }
+        }
 
 
         return view('delete',compact('deleteids','empty'));

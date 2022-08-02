@@ -26,93 +26,94 @@
 
                     // 便宜上試行回数を542回までにする
                     while ($i <= 542) {
-                      // $foodsからランダムにデータを取り出す
-                      $randomfood = Arr::random($sevenfoods);
+                        // $foodsからランダムにデータを取り出す
+                        $randomfood = Arr::random($sevenfoods);
 
-                      if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
-                          if($randomfood['type'] == '揚げ物・フランク・焼き鳥・中華まん'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('おでん',$type))) {
-                          if($randomfood['type'] == 'おでん'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('おにぎり・お寿司',$type))) {
-                          if($randomfood['type'] == 'おにぎり・お寿司'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('パン・サンドイッチ',$type))) {
-                          if($randomfood['type'] == 'パン・サンドイッチ'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('お弁当',$type))) {
-                          if($randomfood['type'] == 'お弁当'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
-                          if($randomfood['type'] == '揚げ物・フランク・焼き鳥'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('そば・うどん・中華麺',$type))) {
-                          if($randomfood['type'] == 'そば・うどん・中華麺'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('パスタ・スパゲッティ・グラタン・ドリア',$type))) {
-                          if($randomfood['type'] == 'パスタ・スパゲッティ・グラタン・ドリア'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('惣菜',$type))) {
-                          if($randomfood['type'] == '惣菜'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('サラダ',$type))) {
-                          if($randomfood['type'] == 'サラダ'){
-                              continue;
-                          }
-                      }if (!(in_array('７プレミアム(主菜)',$type))) {
-                          if($randomfood['type'] == '７プレミアム(主菜)'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('７プレミアム(サラダ)',$type))) {
-                          if($randomfood['type'] == '７プレミアム(サラダ)'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('７プレミアム(その他)',$type))) {
-                          if($randomfood['type'] == '７プレミアム(その他)'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('生鮮',$type))) {
-                          if($randomfood['type'] == '生鮮'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('インスタント・レトルト食品',$type))) {
-                          if($randomfood['type'] == 'インスタント・レトルト食品'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('珍味・缶詰',$type))) {
-                          if($randomfood['type'] == '珍味・缶詰'){
-                              continue;
-                          }
-                      }
-                      if (!(in_array('冷凍食品',$type))) {
-                          if($randomfood['type'] == '冷凍食品'){
-                              continue;
-                          }
-                      }
+                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
+                            if($randomfood['type'] == '揚げ物・フランク・焼き鳥・中華まん'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('おでん',$type))) {
+                            if($randomfood['type'] == 'おでん'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('おにぎり・お寿司',$type))) {
+                            if($randomfood['type'] == 'おにぎり・お寿司'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('パン・サンドイッチ',$type))) {
+                            if($randomfood['type'] == 'パン・サンドイッチ'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('お弁当',$type))) {
+                            if($randomfood['type'] == 'お弁当'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
+                              if($randomfood['type'] == '揚げ物・フランク・焼き鳥'){
+                                  continue;
+                              }
+                        }
+                        if (!(in_array('そば・うどん・中華麺',$type))) {
+                            if($randomfood['type'] == 'そば・うどん・中華麺'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('パスタ・スパゲッティ・グラタン・ドリア',$type))) {
+                            if($randomfood['type'] == 'パスタ・スパゲッティ・グラタン・ドリア'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('惣菜',$type))) {
+                            if($randomfood['type'] == '惣菜'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('サラダ',$type))) {
+                            if($randomfood['type'] == 'サラダ'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('７プレミアム(主菜)',$type))) {
+                            if($randomfood['type'] == '７プレミアム(主菜)'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('７プレミアム(サラダ)',$type))) {
+                            if($randomfood['type'] == '７プレミアム(サラダ)'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('７プレミアム(その他)',$type))) {
+                            if($randomfood['type'] == '７プレミアム(その他)'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('生鮮',$type))) {
+                            if($randomfood['type'] == '生鮮'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('インスタント・レトルト食品',$type))) {
+                            if($randomfood['type'] == 'インスタント・レトルト食品'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('珍味・缶詰',$type))) {
+                            if($randomfood['type'] == '珍味・缶詰'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('冷凍食品',$type))) {
+                            if($randomfood['type'] == '冷凍食品'){
+                                continue;
+                            }
+                        }
 
                       // 無限ループ対策で先に$iを加算
                       $i ++;
@@ -124,7 +125,9 @@
                            continue;
                       }
 
-                      $resultfoods[] = [$randomfood['name'],$randomfood['protein'],$randomfood['fat'],$randomfood['carbo'],$randomfood['kcal'],$randomfood['type']];
+                      // 配列にデータを格納
+                      $resultfoods[] = [$randomfood['name'],$randomfood['protein'],$randomfood['fat'],
+                                        $randomfood['carbo'],$randomfood['kcal'],$randomfood['type']];
 
                       // 処理を行う毎にタンパク質、カロリー、脂質、炭水化物量を足していく
                       $totalprotein = $totalprotein + $randomfood['protein'];
@@ -139,43 +142,43 @@
 
                     }
 
+                    // データ表示用にカウンター変数を準備
                     $counter = 1;
 
+                    // データがユーザーの希望に沿っていればデータの表示
                     if ($totalprotein >= $needprotein &&
                         $totalfat <= $needfat &&
                         $totalcarbo <= $needcarbo) {
-                          // 取り出したデータを表示
-                          foreach ($resultfoods as $resultfood => $value) {?>
-                            <form class="pull-left pt-4" action="/favorite" method="post">
-                            {{Form::checkbox('favorite[]',$value[0])}}
+                            // 取り出したデータを表示
+                            foreach ($resultfoods as $resultfood => $value) {?>
+                              <form class="pull-left pt-4" action="/favorite" method="post">
+                              {{Form::checkbox('favorite[]',$value[0])}}
                             <?php
-                            echo $counter.'：'.$value[0].'('.$value[5].')'.'<br>'.
-                            '【・タンパク質:'.$value[1].'g'.'・脂質:'.$value[2].'g'.'・炭水化物:'.$value[3].'g'.'   kcal:'.$value[4].'】'.'<br>';
-                            $counter ++;
-                          }?>
+                              echo $counter.'：'.$value[0].'('.$value[5].')'.'<br>'.
+                              '【・タンパク質:'.$value[1].'g'.'・脂質:'.$value[2].'g'.'・炭水化物:'.$value[3].'g'.'   kcal:'.$value[4].'】'.'<br>';
+                              $counter ++;
+                            }?>
 
                               @csrf
                               <input class="mt-3" type="submit" value="選択した商品をお気に入りに登録" >
-                          </form>
+                              </form>
 
                           <?php
-
                           // それぞれの合計値を表示
-                          echo '<br>';
-                          echo '総タンパク質量 '.$totalprotein.'g';
-                          echo '<br>';
-                          echo '総脂質量 '.$totalfat.'g';
-                          echo '<br>';
-                          echo '総炭水化物量 '.$totalcarbo.'g';
-                          echo '<br>';
-                          echo '総カロリー '.$totalkcal.'kcal';
-                          echo '<br>';
-                          echo '<br>';
-                          echo "※ブラウザの更新ボタンで再検索ができます。";
-
+                            echo '<br>';
+                            echo '総タンパク質量 '.$totalprotein.'g';
+                            echo '<br>';
+                            echo '総脂質量 '.$totalfat.'g';
+                            echo '<br>';
+                            echo '総炭水化物量 '.$totalcarbo.'g';
+                            echo '<br>';
+                            echo '総カロリー '.$totalkcal.'kcal';
+                            echo '<br>';
+                            echo '<br>';
+                            echo "※ブラウザの更新ボタンで再検索ができます。";
                     }
 
-
+                    // 結果が希望通りにならなかった場合、メッセージの表示
                     if ($totalprotein<$needprotein) {
                         echo "条件に合う検索結果が得られませんでした。お手数ですが、もう一度検索してください。";
                         echo '<br>';

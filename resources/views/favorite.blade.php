@@ -15,27 +15,29 @@
                     @endif
                     <div class="lh-lg">
                     <?php
-                    $counter = 1;
-                    foreach ($allfavorites as $allfavorite => $value) {
-                      if($value['user_id'] == $user->id){?>
+                      $counter = 1;
+                      foreach ($allfavorites as $allfavorite => $value) {
+                          if($value['user_id'] == $user->id){?>
 
-                          <form class="pull-left pt-4" action="/delete" method="post">
-                          {{Form::checkbox('delete[]',$value['id'])}}
-                      <?php
+                            <!-- チェックボタンの設置 -->
+                  <form class="pull-left pt-4" action="/delete" method="post">
+                  {{Form::checkbox('delete[]',$value['id'])}}
+                    <?php
                           echo $counter.'：'.$value['name'].'('.$value['type'].')'.'<br>'.
                           '【・タンパク質:'.$value['protein'].'g'.'・脂質:'.$value['fat'].'g'.'・炭水化物:'.$value['carbo'].'g'.'   kcal:'.$value['kcal'].'】'.'<br>';
                           $counter ++;
+                          }
                       }
-                    }
                     ?>
+                  <!-- 削除ボタン -->
                     @csrf
                     <input class="mt-3" type="submit" value="選択した商品をお気に入りから削除" >
                   </form>
-
-                    <form class="text-center mt-5" action="/home" method="post">
-                        @csrf
-                        <input type="submit" value="ホームに戻る" >
-                    </form>
+                  <!-- ホームボタン -->
+                  <form class="text-center mt-5" action="/home" method="post">
+                      @csrf
+                      <input type="submit" value="ホームに戻る" >
+                  </form>
 
 
 
