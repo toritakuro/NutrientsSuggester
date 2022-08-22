@@ -531,7 +531,6 @@
     "yargs-parser": "^21.0.1"
   },
   "scripts": {
-    "heroku-prebuild": "npm i -f",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
