@@ -29,87 +29,92 @@
                         // $foodsからランダムにデータを取り出す
                         $randomfood = Arr::random($sevenfoods);
 
-                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',(array)$type))) {
+                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
                             if($randomfood['type'] == '揚げ物・フランク・焼き鳥・中華まん'){
                                 continue;
                             }
                         }
-                        if (!(in_array('おでん',(array)$type))) {
+                        if (!(in_array('おでん',$type))) {
                             if($randomfood['type'] == 'おでん'){
                                 continue;
                             }
                         }
-                        if (!(in_array('おにぎり・お寿司',(array)$type))) {
+                        if (!(in_array('おにぎり・お寿司',$type))) {
                             if($randomfood['type'] == 'おにぎり・お寿司'){
                                 continue;
                             }
                         }
-                        if (!(in_array('パン・サンドイッチ',(array)$type))) {
+                        if (!(in_array('パン・サンドイッチ',$type))) {
                             if($randomfood['type'] == 'パン・サンドイッチ'){
                                 continue;
                             }
                         }
-                        if (!(in_array('お弁当',(array)$type))) {
+                        if (!(in_array('お弁当',$type))) {
                             if($randomfood['type'] == 'お弁当'){
                                 continue;
                             }
                         }
-                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',(array)$type))) {
+                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type))) {
                               if($randomfood['type'] == '揚げ物・フランク・焼き鳥'){
                                   continue;
                               }
                         }
-                        if (!(in_array('そば・うどん・中華麺',(array)$type))) {
+                        if (!(in_array('そば・うどん・中華麺',$type))) {
                             if($randomfood['type'] == 'そば・うどん・中華麺'){
                                 continue;
                             }
                         }
-                        if (!(in_array('パスタ・スパゲッティ・グラタン・ドリア',(array)$type))) {
+                        if (!(in_array('パスタ・スパゲッティ・グラタン・ドリア',$type))) {
                             if($randomfood['type'] == 'パスタ・スパゲッティ・グラタン・ドリア'){
                                 continue;
                             }
                         }
-                        if (!(in_array('惣菜',(array)$type))) {
+                        if (!(in_array('惣菜',$type))) {
                             if($randomfood['type'] == '惣菜'){
                                 continue;
                             }
                         }
-                        if (!(in_array('サラダ',(array)$type))) {
+                        if (!(in_array('サラダ',$type))) {
                             if($randomfood['type'] == 'サラダ'){
                                 continue;
                             }
                         }
-                        if (!(in_array('７プレミアム(主菜)',(array)$type))) {
+                        if (!(in_array('７プレミアム(主菜)',$type))) {
                             if($randomfood['type'] == '７プレミアム(主菜)'){
                                 continue;
                             }
                         }
-                        if (!(in_array('７プレミアム(サラダ)',(array)$type))) {
+                        if (!(in_array('７プレミアム(副菜)',$type))) {
+                            if($randomfood['type'] == '７プレミアム(主菜)'){
+                                continue;
+                            }
+                        }
+                        if (!(in_array('７プレミアム(サラダ)',$type))) {
                             if($randomfood['type'] == '７プレミアム(サラダ)'){
                                 continue;
                             }
                         }
-                        if (!(in_array('７プレミアム(その他)',(array)$type))) {
+                        if (!(in_array('７プレミアム(その他)',$type))) {
                             if($randomfood['type'] == '７プレミアム(その他)'){
                                 continue;
                             }
                         }
-                        if (!(in_array('生鮮',(array)$type))) {
+                        if (!(in_array('生鮮',$type))) {
                             if($randomfood['type'] == '生鮮'){
                                 continue;
                             }
                         }
-                        if (!(in_array('インスタント・レトルト食品',(array)$type))) {
+                        if (!(in_array('インスタント・レトルト食品',$type))) {
                             if($randomfood['type'] == 'インスタント・レトルト食品'){
                                 continue;
                             }
                         }
-                        if (!(in_array('珍味・缶詰',(array)$type))) {
+                        if (!(in_array('珍味・缶詰',$type))) {
                             if($randomfood['type'] == '珍味・缶詰'){
                                 continue;
                             }
                         }
-                        if (!(in_array('冷凍食品',(array)$type))) {
+                        if (!(in_array('冷凍食品',$type))) {
                             if($randomfood['type'] == '冷凍食品'){
                                 continue;
                             }
