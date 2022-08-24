@@ -54,11 +54,6 @@
                                 continue;
                             }
                         }
-                        if (!(in_array('揚げ物・フランク・焼き鳥・中華まん',$type ?? [],true))) {
-                              if($randomfood['type'] == '揚げ物・フランク・焼き鳥'){
-                                  continue;
-                              }
-                        }
                         if (!(in_array('そば・うどん・中華麺',$type ?? [],true))) {
                             if($randomfood['type'] == 'そば・うどん・中華麺'){
                                 continue;
@@ -85,7 +80,7 @@
                             }
                         }
                         if (!(in_array('７プレミアム(副菜)',$type ?? [],true))) {
-                            if($randomfood['type'] == '７プレミアム(主菜)'){
+                            if($randomfood['type'] == '７プレミアム(副菜)'){
                                 continue;
                             }
                         }

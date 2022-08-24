@@ -57,6 +57,7 @@
                   </div>
                   <div class="justify-content-center">
                        {{ Form::checkbox('type[]', '冷凍食品', true) }} 冷凍食品
+                       {{ Form::checkbox('type[]', '７プレミアム(副菜)', true) }} ７プレミアム(副菜)
                   </div>
                 </div>
 
