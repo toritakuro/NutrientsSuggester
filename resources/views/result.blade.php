@@ -32,10 +32,10 @@
                         // $sevenfoodsからランダムにデータを取り出す
                         $randomfood = Arr::random($sevenfoods);
 
-                        if (!(in_array($randomfood['type'],$type,true))) {
+                        if (in_array($randomfood['type'],$type,true)) {
 
                                 continue;
-                            
+
                         }
 
 
