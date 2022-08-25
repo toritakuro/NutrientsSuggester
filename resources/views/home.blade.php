@@ -13,7 +13,7 @@
                     @csrf
                   　　タンパク質　
                   　　<div class="col-xs-2">
-                    　　{{Form::input('number','protein',100)}} g 以上
+                    　　{{Form::input('number','protein',10)}} g 以上
                   　　</div>
                   　　脂質　
                   　　<div class="col-xs-2">
