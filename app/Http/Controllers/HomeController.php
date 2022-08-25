@@ -88,6 +88,7 @@ class HomeController extends Controller
         $needprotein = $request -> protein;
         $needfat = $request -> fat;
         $needcarbo = $request -> carbo;
+        $type = array();
         $type = $request -> input('type');
 
 
