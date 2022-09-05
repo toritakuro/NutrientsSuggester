@@ -22,8 +22,8 @@
                     $totalfat = 0;
                     $totalcarbo = 0;
                     $resultfoods = array();
-                    $array_type = array();
-                    $array_type = $type;
+                    // $array_type = array();
+                    // $array_type = $type;
 
 
                     // 便宜上試行回数を542回までにする
@@ -35,11 +35,11 @@
                         $randomfood = Arr::random($sevenfoods);
 
 
-                        if (!(in_array($randomfood['type'],(array)$type,true))) {
+                        // if (!(in_array($randomfood['type'],(array)$type,true))) {
 
-                                continue;
+                                // continue;
 
-                        }
+                        // }
 
 
 

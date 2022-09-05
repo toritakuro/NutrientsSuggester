@@ -88,15 +88,15 @@ class HomeController extends Controller
         $needprotein = $request -> protein;
         $needfat = $request -> fat;
         $needcarbo = $request -> carbo;
-        $type = array();
-        $type = $request -> input('type');
+        // $type = array();
+        // $type = $request -> input('type');
 
 
         $sevenfoods = new SevenFood;
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
         $i = 0;
 
-        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo','type'));
+        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo'));
     }
 
 
