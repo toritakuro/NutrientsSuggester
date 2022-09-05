@@ -22,28 +22,24 @@
                     $totalfat = 0;
                     $totalcarbo = 0;
                     $resultfoods = array();
+                    $array_type = array();
+                    $array_type = $type;
 
 
-                    // 便宜上試行回数を10000回までにする
-                    while ($i <= 10000) {
+                    // 便宜上試行回数を542回までにする
+                    while ($i <= 542) {
                         // 無限ループ対策で先に$iを加算
                         $i ++;
 
                         // $sevenfoodsからランダムにデータを取り出す
                         $randomfood = Arr::random($sevenfoods);
 
-                        $flipArr = array_flip($type);
-                        if (isset($flipArr[$randomfood['type']])) {
-                              continue;
+
+                        if (!(in_array($randomfood['type'],(array)$type,true))) {
+
+                                continue;
+
                         }
-
-
-
-                        // if (!(in_array($randomfood['type'],(array)$type,true))) {
-
-                                // continue;
-
-                        // }
 
 
 
