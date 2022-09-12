@@ -23,7 +23,7 @@
                     $totalcarbo = 0;
                     $resultfoods = array();
 
-                    dd($type);
+                    // dd($type);
 
 
                     // 便宜上試行回数を542回までにする

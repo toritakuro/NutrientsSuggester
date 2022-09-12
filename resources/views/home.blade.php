@@ -31,33 +31,33 @@
                   <!-- 種類のチェックボタン -->
                   <p class="mt-4">以下の種類の中から検索</p>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', '揚げ物・フランク・焼き鳥・中華まん', true) }} 揚げ物・フランク・焼き鳥・中華まん
-                       {{ Form::checkbox('type[]', 'おでん', true) }} おでん
-                       {{ Form::checkbox('type[]', 'おにぎり・お寿司', true) }} おにぎり・お寿司
+                      <input type="checkbox" name=type[] value="揚げ物・フランク・焼き鳥・中華まん">揚げ物・フランク・焼き鳥・中華まん
+                      <input type="checkbox" name=type[] value="おでん">おでん
+                      <input type="checkbox" name=type[] value="おにぎり・お寿司">おにぎり・お寿司
                   </div>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', 'パン・サンドイッチ', true) }} パン・サンドイッチ
-                       {{ Form::checkbox('type[]', 'お弁当', true) }} お弁当
-                       {{ Form::checkbox('type[]', 'そば・うどん・中華麺', true) }} そば・うどん・中華麺
+                      <input type="checkbox" name=type[] value="パン・サンドイッチ">パン・サンドイッチ
+                      <input type="checkbox" name=type[] value="お弁当">お弁当
+                      <input type="checkbox" name=type[] value="そば・うどん・中華麺">そば・うどん・中華麺
                   </div>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', 'パスタ・スパゲッティ・グラタン・ドリア', true) }} パスタ・スパゲッティ・グラタン・ドリア
-                       {{ Form::checkbox('type[]', '惣菜', true) }} 惣菜
-                       {{ Form::checkbox('type[]', 'サラダ', true) }} サラダ
+                      <input type="checkbox" name=type[] value="パスタ・スパゲッティ・グラタン・ドリア">パスタ・スパゲッティ・グラタン・ドリア
+                      <input type="checkbox" name=type[] value="惣菜">惣菜
+                      <input type="checkbox" name=type[] value="サラダ">サラダ
                   </div>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', '７プレミアム(主菜)', true) }} ７プレミアム(主菜)
-                       {{ Form::checkbox('type[]', '７プレミアム(サラダ)', true) }} ７プレミアム(サラダ)
-                       {{ Form::checkbox('type[]', '７プレミアム(その他)', true) }} ７プレミアム(その他)
+                      <input type="checkbox" name=type[] value="７プレミアム(主菜)">７プレミアム(主菜)
+                      <input type="checkbox" name=type[] value="７プレミアム(サラダ)">７プレミアム(サラダ)
+                      <input type="checkbox" name=type[] value="７プレミアム(その他)">７プレミアム(その他)
                   </div>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', '生鮮', true) }} 生鮮
-                       {{ Form::checkbox('type[]', 'インスタント・レトルト食品', true) }} インスタント・レトルト食品
-                       {{ Form::checkbox('type[]', '珍味・缶詰', true) }} 珍味・缶詰
+                      <input type="checkbox" name=type[] value="生鮮">生鮮
+                      <input type="checkbox" name=type[] value="インスタント・レトルト食品">インスタント・レトルト食品
+                      <input type="checkbox" name=type[] value="珍味・缶詰">珍味・缶詰
                   </div>
                   <div class="justify-content-center">
-                       {{ Form::checkbox('type[]', '冷凍食品', true) }} 冷凍食品
-                       {{ Form::checkbox('type[]', '７プレミアム(副菜)', true) }} ７プレミアム(副菜)
+                      <input type="checkbox" name=type[] value="冷凍食品">冷凍食品
+                      <input type="checkbox" name=type[] value="７プレミアム(副菜)">７プレミアム(副菜)
                   </div>
                 </div>
 

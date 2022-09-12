@@ -90,7 +90,7 @@ class HomeController extends Controller
         $needcarbo = $request->carbo;
         $type = array();
         $type = $request->input('type');
-        dd($request);
+        // dd($request);
 
 
         $sevenfoods = new SevenFood();
