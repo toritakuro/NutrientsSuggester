@@ -12,7 +12,6 @@ class SevenFood extends Model
     public function sevenfood(){
     // foodsテーブルのデータを全て取得し、配列として$foodsに格納
     $sevenfoods = SevenFood::get();
-    dd($sevenfoods);
     return $sevenfoods;
     }
 

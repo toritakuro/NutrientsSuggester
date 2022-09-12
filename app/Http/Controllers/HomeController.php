@@ -85,14 +85,14 @@ class HomeController extends Controller
     public function result(Request $request)
     {
       // フォームから送られた値をそれぞれ格納
-        $needprotein = $request -> protein;
-        $needfat = $request -> fat;
-        $needcarbo = $request -> carbo;
+        $needprotein = $request->protein;
+        $needfat = $request->fat;
+        $needcarbo = $request->carbo;
         $type = array();
-        $type = $request -> input('type');
+        $type = $request->input('type');
 
 
-        $sevenfoods = new SevenFood;
+        $sevenfoods = new SevenFood();
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
         $i = 0;
 
