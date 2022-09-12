@@ -53,7 +53,7 @@ class HomeController extends Controller
         // 配列の準備
         $favorites = array();
 
-        // ユーザーからリクエストがあれば処理を実行
+        // ユーザーからtypeリクエストがあれば処理を実行
         if(!empty($favoritefoods)){
             foreach ($favoritefoods as $favoritefood) {
                 foreach ($sevenfoods as $sevenfood) {
@@ -88,15 +88,15 @@ class HomeController extends Controller
         $needprotein = $request -> protein;
         $needfat = $request -> fat;
         $needcarbo = $request -> carbo;
-        // $type = array();
-        // $type = $request -> input('type');
+        $type = array();
+        $type = $request -> input('type');
 
 
         $sevenfoods = new SevenFood;
         $sevenfoods = $sevenfoods->sevenfood()->toArray();
         $i = 0;
 
-        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo'));
+        return view('result',compact('sevenfoods','needprotein','i','needfat','needcarbo','type'));
     }
 
 

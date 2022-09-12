@@ -22,8 +22,8 @@
                     $totalfat = 0;
                     $totalcarbo = 0;
                     $resultfoods = array();
-                    // $array_type = array();
-                    // $array_type = $type;
+
+                    // dd($type);
 
 
                     // 便宜上試行回数を542回までにする
@@ -34,12 +34,12 @@
                         // $sevenfoodsからランダムにデータを取り出す
                         $randomfood = Arr::random($sevenfoods);
 
+                        // randomfoodのtypeがユーザーの希望しないtypeだったらやり直し
+                        if (!(in_array($randomfood['type'],(array)$type,true))) {
 
-                        // if (!(in_array($randomfood['type'],(array)$type,true))) {
+                                continue;
 
-                                // continue;
-
-                        // }
+                        }
 
 
 
@@ -59,7 +59,7 @@
                       $totalfat = $totalfat + $randomfood['fat'];
                       $totalcarbo = $totalcarbo + $randomfood['carbo'];
 
-                        // proteinの値が条件を満たしたら終了
+                      // proteinの値が条件を満たしたら終了
                       if($totalprotein >= $needprotein){
                         break;
                       }
