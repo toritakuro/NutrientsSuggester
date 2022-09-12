@@ -14,6 +14,7 @@ class Favorite extends Model
   public function favorite(){
 
       $favorite = Favorite::get();
+      dd($favorite);
       return $favorite;
   }
 }
