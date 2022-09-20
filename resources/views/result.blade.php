@@ -66,6 +66,7 @@
 
                     }
 
+
                     // データ表示用にカウンター変数を準備
                     $counter = 1;
 
@@ -114,11 +115,17 @@
                     </div>
 
 
-                     <!-- ホームボタンの設置 -->
+                     <!-- ボタンの設置 -->
+                     <div class="d-flex justify-content-center p-3">
                      　<form class="text-center" action="/home" method="post">
                          @csrf
                          <input type="submit" value="ホームに戻る" >
-                       </form>
+                      </form>
+                      <form class="text-center ml-2" action="/favorite" method="post">
+                         @csrf
+                         <input type="submit" value="お気に入り一覧" >
+                      </form>
+                     </div>
 
                 </div>
             </div>
