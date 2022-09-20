@@ -1,9 +1,9 @@
 {
     "private": true,
     "engines": {
-    "node": "v18.4.0",
-    "npm":"8.12.1"
-  },
+        "node": "v18.4.0",
+        "npm": "8.12.1"
+    },
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -27,5 +27,8 @@
         "vue": "^2.6.12",
         "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "jquery": "^3.6.1"
     }
 }

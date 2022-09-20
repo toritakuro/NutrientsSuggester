@@ -117,7 +117,7 @@
 
                      <!-- ボタンの設置 -->
                      <div class="d-flex justify-content-center p-3">
-                     　<form class="text-center" action="/home" method="post">
+                       <form class="text-center" action="/home" method="post">
                          @csrf
                          <input type="submit" value="ホームに戻る" >
                        </form>
