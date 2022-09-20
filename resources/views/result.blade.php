@@ -120,11 +120,11 @@
                      　<form class="text-center" action="/home" method="post">
                          @csrf
                          <input type="submit" value="ホームに戻る" >
-                      </form>
-                      <form class="text-center ml-2" action="/favorite" method="post">
+                       </form>
+                       <form class="text-center ml-2" action="/favorite" method="post">
                          @csrf
                          <input type="submit" value="お気に入り一覧" >
-                      </form>
+                       </form>
                      </div>
 
                 </div>
